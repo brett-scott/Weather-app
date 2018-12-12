@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="../css/style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1><%= data['name'] %></h1>
+            <br>
+            <ul>
+                <li>Weather Pattern: <%= data.weather[0]['main'] %></li>
+                <li>Weather Condition: <%= data.weather[0]['description'] %></li>
+                <li>Humidity: <%= data.main['humidity'] %>%</li>
+                <li>Temperature: <%= data.main['temp'] %>&#176;C</li>
+                <li>Wind Speed: <%= data.wind['speed'] %></li>
+                <li>Cloudiness: <%= data.clouds['all'] %> %</li>
+            </ul>
+            <br>
+            <a class="btn btn-primary" href="/" role="button">Go Back</a>
+        </div>
+    </body>
+</html>

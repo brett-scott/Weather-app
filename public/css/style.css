@@ -1,0 +1,19 @@
+input[type="text"] {
+    border: none;
+    border-bottom: 1px solid grey;
+    font-size: 46px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 25px;
+    height: 75px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+form {
+    margin-top: 10%;
+}

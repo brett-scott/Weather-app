@@ -12,6 +12,7 @@ function getWeatherInfo(cityname) {
             if(error) return reject(error);
             if(body.cod === "404") return reject("City Not Found!");
             if(body.cod === 401) return reject("Invalid API Key");
+            if(body.cod === "400") return reject("No input was given")
             resolve(body);
         });
     });

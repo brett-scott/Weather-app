@@ -20,16 +20,13 @@ app.get('/', function(req, res){
 });
 
 app.post('/search/', function(req, res){
-    try{
-        weather.getWeatherInfo(req.body.city).then(d => {
-            if (!d) return console.log("No Response Data");
-       
-            res.render('weather', {
-                data: d
-            });
-        })
-        .catch(e => res.render('error', { error: e}))
-    } catch(e){
-        console.log(`Error: ${e}`);
-    }
+    weather.getWeatherInfo(req.body.city).then(d => {
+        if (!d) return console.log("No Response Data");
+    
+        res.render('weather', {
+            data: d
+        });
+    })
+    .catch(e => res.render('error', { error: e}))
 });
+
